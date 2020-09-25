@@ -18,7 +18,7 @@ for (var i = 0; i < numbers.length; i++) {
 for (var i = 0; i < operations.length; i++) {
   var operationBtn = operations[i];
   operationBtn.addEventListener('click', function (e) {
-    operationPress(e.target.textContent);
+    operationPress(e.target.textContent, e.srcElement.id);
   });
 }
 
@@ -44,11 +44,12 @@ function numberPress(number) {
   }
 }
 
-function operationPress(op) {
+function operationPress(op, elem) {
   let localOperationMemory = display.value;
 
-  if (MemoryNewNumber && MemoryPendingOperation !== '=') {
+  if (MemoryNewNumber && MemoryPendingOperation !== '=' || MemoryPendingOperation === '&#8730'  ) {
     display.value = MemoryCurrentNumber;
+    
   } else {
     MemoryNewNumber = true;
     if (MemoryPendingOperation === '+') {
@@ -59,11 +60,36 @@ function operationPress(op) {
       MemoryCurrentNumber *= +localOperationMemory;
     } else if (MemoryPendingOperation === '/') {
       MemoryCurrentNumber /= +localOperationMemory;
+    } else if (MemoryPendingOperation === 'x^y') {
+      MemoryCurrentNumber = Math.pow(MemoryCurrentNumber, +localOperationMemory);
+    } else if (elem === 'square-root') {
+      MemoryCurrentNumber = Math.sqrt(+localOperationMemory);
     } else {
       MemoryCurrentNumber = +localOperationMemory;
     }
     display.value = MemoryCurrentNumber;
     MemoryPendingOperation = op;
+    
+  }
+}
+
+
+function operationPressSingle(op) {
+  let localOperationMemory = display.value;
+
+  if (MemoryNewNumber && MemoryPendingOperation !== '=' ) {
+    display.value = MemoryCurrentNumber;
+    
+  } else {
+    MemoryNewNumber = true;
+    if (MemoryPendingOperation === '&#8730') {
+      MemoryCurrentNumber = Math.sqrt(+MemoryCurrentNumber, 2);
+    } else {
+      MemoryCurrentNumber = +localOperationMemory;
+    }
+    display.value = MemoryCurrentNumber;
+    MemoryPendingOperation = op;
+    
   }
 }
 
