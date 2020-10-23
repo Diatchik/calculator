@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  color: #000000;
+}
+
+.main-screen {
+  /* border: 1px red solid; */
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+}
+
+
+.change-bgd {
+  width: 50vw;
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  /* border: 1px red solid; */
+}
+
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  /* border: 5px white solid; */
+  
+}
+
+.btn:hover {
+  filter: grayscale(.8);
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active{
+  transform: scale(1.02)
+}
+
+
+.weather-full {
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px greenyellow solid; */
+}
+
+
+.weather {
+  display: flex;
+  flex-flow: row wrap;
+  align-items:flex-start;
+  justify-content: start;
+  /* color: #ffffff; */
+  background-color:#ffffff;
+  border-radius: 5px;
+  opacity: 0.8;
+  /* border: 1px red solid; */
+}
+
+
+.weather-icon {
+  font-size: 60px;
+  margin-right: 15px;
+  color: #44aadd;
+  /* border: 1px solid #ccc; */
+}
+
+
+.weather-icon:hover {
+  animation: shake 1.5s;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
+
+.temperature {    
+  font-size: 30px;
+  color: #44aadd;
+  border-radius: 5px ;
+  /* border: 1px solid #ccc; */
+}
+
+
+.weather-description {
+  display: flex;
+  flex-basis: 100%; 
+  /* display: none; */
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
+  background-color:#44aadd; 
+  border-radius: 0 0 0 0 ;
+}
+
+
+.humidity {    
+  font-size: 30px;
+  /* margin-bottom: 20px; */
+  /* border: 1px solid #ccc; */
+}
+
+
+.wind-speed {
+
+}
+
+
+.city {  
+  /* border: 1px solid #ccc; */
+  flex-basis: 100%;
+  color: #ffffff;
+  background-color:#44aadd; 
+  border-radius: 0  0 5px 5px;
+  text-transform: uppercase;
+}
+
+
+.date-greeting {
+  width: 100vw;
+  /* border: 1px red solid; */
+}
+
+
+
+.time {
+  font-size: 8rem;
+  
+}
+
+.date {
+  font-size: 4rem;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+
+
+.quote {
+  font: bold italic 1.2rem  Georgia, serif;
+  margin: 10rem auto 0;
+  background: #eee;
+  padding: 0.5em ;
+  opacity: 0.5;
+  border-radius: 1em;
+  display: flex;
+  flex-flow: column;
+
+}
+.quote figcaption,
+.quote blockquote {
+  margin: 0.5em;
+}
+
+
+
+.quote figcaption {
+  text-align: right;
+}
+
+.btn-quote {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  /* margin: 10px; */
+  
+}
+.btn-quote:hover {
+  filter: grayscale(.2);
+}
+.btn-quote:active,
+.btn-quote:focus {
+  outline: 0;
+}
+.btn-quote:active{
+  transform: scale(1.02)
+}
+
+
+@media (max-width: 768px) {
+  .time {
+    font-size: 6rem;
+    
+  }
+
+  .date {
+    font-size: 3rem;
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+    
+  }
+
+  .btn-quote {
+    width: 40px;
+    height: 40px;
+    
+  }
+}
+
+
+@media (max-width: 320px) {
+  .time {
+    font-size: 4rem;
+  }
+
+  .date {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 30px;
+    height: 30px;
+    
+  }
+
+  .btn-quote {
+    width: 30px;
+    height: 30px;
+    
+  }
+}
