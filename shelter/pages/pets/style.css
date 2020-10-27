@@ -70,6 +70,9 @@ h1 {
     color: #292929;
 }
 
+.hamburger-menu {
+    display: none;
+}
 
  header nav {
     width: 36.92%;
@@ -146,6 +149,7 @@ h1 {
 .our-friends-wrapper>p {
     /* width: 35%; */
     /* 400px */
+    /* width: 33%; */
     font-family: Georgia;
     font-style: normal;
     font-weight: normal;
@@ -159,15 +163,7 @@ h1 {
 } 
 
 
-.gallery {
-    width: 100%;
-    /* height: 435px; */
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 1% 0;
-} 
+
 
 
 
@@ -180,7 +176,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
-    margin-bottom: 1.5%; 
+    margin-bottom: 2.7%; 
 }
 
 
@@ -510,4 +506,418 @@ h1 {
     margin-left: 6.5%;
     text-decoration: none;
     
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1280px){
+    
+    .wrapper {
+        min-width: 768px;
+    }
+     
+
+    header {
+        width: 92.2%;
+        justify-content: left;
+        margin: 3.5% auto 3.7% ;
+        /* border: 1px red solid; */
+    }
+
+
+    .header-wrapper {
+        background: #FFFFFF;
+    }
+
+
+    .logo {
+        width: 30%;
+        align-items: start;
+        margin-right: 51px
+    }
+
+
+    .title {
+        font-size: 2em;
+        line-height: 110%;
+        margin: 3px 0;
+    }
+
+
+    .subtitle {
+        margin: 10px 0 0 5px;
+    }
+
+
+    header nav {
+        width: 62.6%;
+        margin-top: 20px;
+    }
+
+
+    .header-menu ul{
+        margin: 0;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    
+    .header-menu a {
+        text-decoration: none;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.94em;
+        line-height: 150%;
+        align-items: center;
+        color: #CDCDCD;
+    }
+
+
+    .our-friends {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center; 
+        background: #F6F6F6;
+        /* border: 1px solid red; */
+    }
+
+
+    .our-friends-wrapper {
+        width: 100%;
+        
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin: 10.5% 0% 0% 0%;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+    
+    .our-friends-wrapper>p {
+        margin: 0 0 4% 0;
+        
+    }
+    
+    .gallery-pets {
+        width: 75.52%;
+        height: 1365px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid red; */
+        margin-bottom: 5%; 
+    }
+    
+    
+    .cat-katrine,
+    .cat-jannifer,
+    .cat-woody,
+    .cat-sophia,
+    .cat-timmy,
+    .cat-charly,
+    .cat-scarlet,
+    .cat-freddie {
+        width: 46.55%;
+        margin-bottom: 5.5%;
+    }
+    
+    
+    .gallery-pets>div:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    
+    .pagination {
+        width: 44.27%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 10.2% 0; 
+    }
+    
+    
+
+    .footer {
+       background: url(../../assets/images/footer-background-768.png);
+    }
+
+
+    .footer-content {
+        width: 83.3%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 2.8% 0 0 8.5%
+    }
+
+
+    .footer-content-questions {
+        width: 43.44%;
+    }
+
+
+    .footer-content-visit {
+        width: 47.2%;
+    }
+
+
+    .footer-content-img {
+        width: 100%;
+        text-align: center;
+        margin: 10.4% 0 0 0;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px){
+    
+    .wrapper {
+        min-width: 320px;
+    }
+     
+
+    header {
+        width: 80.3%;
+        margin: 8.2% 0 10% 3%;
+        justify-content: space-between;
+    }
+
+
+    .header-wrapper {
+        background: #FFFFFF;;
+    }
+
+
+    .logo {
+        width: 81.6%;
+        align-items: start;
+    }
+
+
+    .title {
+        font-size: 2em;
+        line-height: 110%;
+        margin: 3px 0;
+    }
+
+
+    .subtitle {
+        margin: 10px 0 0 5px;
+    }
+
+
+    .header-menu {
+        display: none;
+    }
+
+
+    .hamburger-menu {
+        display: initial;
+        width: 12%;
+    }
+
+
+    #menu__toggle {
+        opacity: 0;
+    }
+      
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+      
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+      
+    #menu__toggle:checked ~ .menu__box {
+        /* visibility: visible; */
+        display: none;
+        left: 0;
+    }
+      
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 15% 0 0 0;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1;
+    }
+      
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000000;
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -10px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 10px;
+    }
+      
+    .menu__box {
+        display: none;
+        visibility: hidden;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 0px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+    }
+      
+
+    .our-friends {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center; 
+        background: #F6F6F6;
+        /* border: 1px solid red; */
+    }
+
+
+    .our-friends-wrapper {
+        width: 93.75%;
+        
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin: 13% auto 0%;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+    
+    .our-friends-wrapper>p {
+        margin: 0 0 14% 0;
+        font-size: 25px;
+        line-height: 130%;
+        
+    }
+    
+    .gallery-pets {
+        width: 100%;
+        height: 1365px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+        /* border: 1px solid red; */
+        margin-bottom: 14%; 
+    }
+    
+    
+    .cat-katrine,
+    .cat-jannifer,
+    .cat-woody,
+    .cat-sophia,
+    .cat-timmy,
+    .cat-charly,
+    .cat-scarlet,
+    .cat-freddie {
+        width: 90%;
+        margin: 0 auto 10%;
+        /* border: 1px solid red; */
+    }
+    
+    
+    .gallery-pets>div:nth-child(4n) {
+        margin-right: 0;
+    }
+    
+    
+    .pagination {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 14% 0; 
+    }
+    
+
+    .footer {
+        
+        background: url(../../assets/images/footer-background-768.png);
+    }
+
+
+    .footer-content {
+        width: 93.75%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin: 8% auto 0;
+        
+    }
+
+
+    .footer-content-questions {
+        width: 100%;
+    }
+
+
+    .footer-content-questions-email {
+        width: 251px;
+        margin: 13.3% 0 0 4%;
+    }
+
+    .footer-content-questions-phone {
+        width: 239px;
+        margin: 13% 0  0 4%;
+    }
+
+    .footer-content-visit {
+        width: 100%;
+        margin: 14% auto 0;
+    }
+
+    .footer-content-questions p,
+    .footer-content-visit p {
+        text-align: center;
+    }
+
+
+    .footer-content-img {
+        
+        width: 100%;
+        text-align: center;
+        margin: 31% 0 0 0;
+
+    }
+
+
+    .footer-content-img img {
+        width: 86.25%;
+    }
+
 }
